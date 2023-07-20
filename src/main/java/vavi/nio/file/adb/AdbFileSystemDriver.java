@@ -26,7 +26,6 @@ import com.github.fge.filesystem.exceptions.IsDirectoryException;
 import com.github.fge.filesystem.exceptions.UnsupportedOptionException;
 import com.github.fge.filesystem.provider.FileSystemFactoryProvider;
 import se.vidstige.jadb.JadbDevice;
-import se.vidstige.jadb.JadbException;
 import se.vidstige.jadb.RemoteFile;
 
 
@@ -61,7 +60,7 @@ public final class AdbFileSystemDriver extends DoubleCachedFileSystemDriver<Remo
 
     @Override
     protected RemoteFile getRootEntry(Path path) throws IOException {
-        return new RemoteFile(path.toString()) {
+        return new RemoteFile("") {
             @Override public int getSize() {
                 return 0;
             }
@@ -89,11 +88,7 @@ public final class AdbFileSystemDriver extends DoubleCachedFileSystemDriver<Remo
 
     @Override
     protected List<RemoteFile> getDirectoryEntries(RemoteFile dirEntry, Path dir) throws IOException {
-        try {
-            return fileSystem.list(dir.toString()).stream().filter(p -> !p.getPath().equals(".") && !p.getPath().equals("..")).collect(Collectors.toList());
-        } catch (JadbException e) {
-            throw new IOException(e);
-        }
+        return fileSystem.list(dir.toString()).stream().filter(p -> !p.getPath().equals(".") && !p.getPath().equals("..")).collect(Collectors.toList());
     }
 
     @Override

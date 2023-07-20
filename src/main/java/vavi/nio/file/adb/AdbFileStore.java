@@ -15,9 +15,9 @@ import se.vidstige.jadb.JadbDevice;
 
 
 /**
- * A simple DiskUtils {@link FileStore}
+ * A simple ADB {@link FileStore}
  * <p>
- * This makes use of information available in {@link DiscFileSystem}.
+ * This makes use of information available in {@link JadbDevice}.
  * Information is computed in "real time".
  *
  * @author <a href="mailto:umjammer@gmail.com">Naohide Sano</a> (umjammer)

@@ -14,7 +14,6 @@ import com.github.fge.filesystem.driver.FileSystemDriver;
 import com.github.fge.filesystem.provider.FileSystemRepositoryBase;
 import se.vidstige.jadb.JadbConnection;
 import se.vidstige.jadb.JadbDevice;
-import se.vidstige.jadb.JadbException;
 
 
 /**
@@ -38,14 +37,10 @@ public final class AdbFileSystemRepository extends FileSystemRepositoryBase {
      */
     @Override
     public FileSystemDriver createDriver(URI uri, Map<String, ?> env) throws IOException {
-        try {
-            JadbConnection jadb = new JadbConnection();
-            JadbDevice device = jadb.getAnyDevice();
+        JadbConnection jadb = new JadbConnection();
+        JadbDevice device = jadb.getAnyDevice();
 
-            AdbFileStore fileStore = new AdbFileStore(device, factoryProvider.getAttributesFactory());
-            return new AdbFileSystemDriver(fileStore, factoryProvider, device, env);
-        } catch (JadbException e) {
-            throw new RuntimeException(e);
-        }
+        AdbFileStore fileStore = new AdbFileStore(device, factoryProvider.getAttributesFactory());
+        return new AdbFileSystemDriver(fileStore, factoryProvider, device, env);
     }
 }

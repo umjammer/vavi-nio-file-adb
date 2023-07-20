@@ -13,6 +13,8 @@ import java.nio.file.attribute.GroupPrincipal;
 import java.nio.file.attribute.PosixFileAttributes;
 import java.nio.file.attribute.PosixFilePermission;
 import java.nio.file.attribute.UserPrincipal;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +23,7 @@ import se.vidstige.jadb.RemoteFile;
 
 
 /**
- * {@link BasicFileAttributes} implementation for DiskUtils.
+ * {@link BasicFileAttributes} implementation for ADB.
  *
  * @author <a href="mailto:umjammer@gmail.com">Naohide Sano</a> (umjammer)
  * @version 0.00 2023/07/18 umjammer initial version <br>
