@@ -9,13 +9,12 @@
 
 📱 mount the android world!
 
-[original](https://github.com/vidstige/jadb)
-
 ## Status
 
-| fs  | list | upload | download | copy | move | rm | mkdir | cache | watch | library                                   |
-|-----|------|--------|----------|------|------|----|-------|-------|-------|-------------------------------------------|
-| adb | ✅   | ✅    | ✅       |    |   |  |    | ✅   |       | [jadb](https://github.com/umjammer/jadb/) |
+| fs         | list | upload | download | copy | move | rm | mkdir | cache | watch | library                                   |
+|------------|------|--------|----------|------|------|----|-------|-------|-------|-------------------------------------------|
+| adb        | ✅   | ✅    | ✅       |    |   |  |    | ✅   |       | [jadb](https://github.com/umjammer/jadb/) |
+| adb (fuse) | ✅   | ✅    | ✅       |    |   |  |    | ✅   |       | [jadb](https://github.com/umjammer/jadb/) |
 
 ## Install
 
@@ -23,6 +22,10 @@
 
 
 ## TODO
+
+ * integration test
+ * make other functions using shell commands?
+ * SyncTransport#readChunk is too slow, threading?
 
 ## References
 

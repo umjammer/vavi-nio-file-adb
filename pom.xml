@@ -62,9 +62,9 @@
     </dependency>
 
     <dependency>
-      <groupId>se.vidstige</groupId>
+      <groupId>com.github.umjammer</groupId> <!-- se.vidstige -->
       <artifactId>jadb</artifactId>
-      <version>1.2.2v-SNAPSHOT</version>
+      <version>1.2.3v</version>
     </dependency>
 
     <dependency>
@@ -106,18 +106,6 @@
       <version>${vavi-apps-fuse.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.libvirt</groupId>
-      <artifactId>libvirt</artifactId>
-      <version>0.5.2</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>net.java.dev.jna</groupId>
-      <artifactId>jna</artifactId>
-      <version>5.13.0</version>
     </dependency>
   </dependencies>
 </project>
