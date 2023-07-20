@@ -92,6 +92,11 @@ public final class AdbBasicFileAttributesProvider extends BasicFileAttributesPro
 
     @Override
     public Set<PosixFilePermission> permissions() {
-        return entry.permissions();
+        Set<PosixFilePermission> permissions = new HashSet<>(entry.permissions());
+        // for convenience force to add "r-x" for owner
+        permissions.add(PosixFilePermission.OWNER_READ);
+        if (isDirectory())
+            permissions.add(PosixFilePermission.OWNER_EXECUTE);
+        return permissions;
     }
 }
