@@ -13,6 +13,7 @@ import java.time.ZoneId;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
 import se.vidstige.jadb.JadbConnection;
 import se.vidstige.jadb.JadbDevice;
 import se.vidstige.jadb.RemoteFile;
@@ -33,6 +34,7 @@ class Test1 {
      */
     @Test
     @DisplayName("jadb")
+    @DisabledIfEnvironmentVariable(named = "GITHUB_WORKFLOW", matches = ".*")
     void test2() throws Exception {
         JadbConnection jadb = new JadbConnection();
         JadbDevice device = jadb.getAnyDevice();

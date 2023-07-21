@@ -1,5 +1,3 @@
-
-[![GitHub Packages](https://github.com/umjammer/vavi-nio-file-adb/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/umjammer/vavi-nio-file-adb/actions/workflows/maven-publish.yml)
 [![Release](https://jitpack.io/v/umjammer/vavi-nio-file-adb.svg)](https://jitpack.io/#umjammer/vavi-nio-file-adb)
 [![Java CI](https://github.com/umjammer/vavi-nio-file-adb/actions/workflows/maven.yml/badge.svg)](https://github.com/umjammer/vavi-nio-file-adb/actions/workflows/maven.yml)
 [![CodeQL](https://github.com/umjammer/vavi-nio-file-adb/actions/workflows/codeql.yml/badge.svg)](https://github.com/umjammer/vavi-nio-file-adb/actions/workflows/codeql-analysis.yml)
