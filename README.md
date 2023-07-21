@@ -25,7 +25,7 @@
 
  * integration test
  * make other functions using shell commands?
- * SyncTransport#readChunk is too slow, threading?
+ * ~~SyncTransport#readChunk is too slow, threading?~~ because of [#4782263](https://github.com/umjammer/jadb/commit/4782263f0cbd78bff12546ffee86e7f63dddf5a9)
 
 ## References
 
@@ -41,4 +41,4 @@
  * mtp
    * https://github.com/pranav-prakash/jmtpfs
  * sdcard image is qcow2
-   * [libvirt](https://libvirt.org/) ... too much? needs server? 
+   * ~~[libvirt](https://libvirt.org/) ... too much? needs server?~~ → [vavi-nio-file-qcow](https://github.com/umjammer/vavi-nio-file-qcow) 

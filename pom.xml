@@ -8,7 +8,7 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <properties>
-    <vavi-apps-fuse.version>0.1.9-SNAPSHOT</vavi-apps-fuse.version>
+    <vavi-apps-fuse.version>0.1.8</vavi-apps-fuse.version>
   </properties>
 
   <build>
@@ -68,9 +68,9 @@
     </dependency>
 
     <dependency>
-      <groupId>com.github.fge</groupId>
+      <groupId>com.github.umjammer</groupId>
       <artifactId>java7-fs-base</artifactId>
-      <version>0.0.14v-SNAPSHOT</version>
+      <version>0.0.13v</version>
     </dependency>
 
     <dependency>
@@ -95,13 +95,13 @@
     </dependency>
 
     <dependency>
-      <groupId>vavi</groupId>
+      <groupId>com.github.umjammer.vavi-apps-fuse</groupId>
       <artifactId>vavi-net-fuse</artifactId>
       <version>${vavi-apps-fuse.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>vavi</groupId>
+      <groupId>com.github.umjammer.vavi-apps-fuse</groupId>
       <artifactId>vavi-net-fuse</artifactId>
       <version>${vavi-apps-fuse.version}</version>
       <type>test-jar</type>
